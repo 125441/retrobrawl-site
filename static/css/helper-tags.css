@@ -1,0 +1,89 @@
+.h1 {
+    font-size: 1.1em;
+    font-weight: bold;
+}
+
+.h2 {
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+.h3 {
+    font-size: 1.3em;
+    font-weight: bold;
+}
+
+.h4 {
+    font-size: 1.4em;
+    font-weight: bold;
+}
+
+.dark-black {
+    color: var(--dark-black);
+}
+
+.black {
+    color: var(--black);
+}
+
+.white {
+    color: var(--white);
+}
+
+.inverted {
+    filter: invert(100%) hue-rotate(180deg);
+}
+
+.left {
+    display: flex;
+    justify-self: left;
+}
+
+.right {
+    display: flex;
+    justify-self: right;
+}
+
+.center {
+    display: flex;
+    justify-self: center;
+}
+
+.middle {
+    display: grid;
+    justify-self: center;
+    align-self: center;
+}
+
+.custom-button {
+    display: inline-block;
+
+    background-color: var(--black);
+
+    padding: 10px;
+    margin: 2px 0 2px 0;
+    border-radius: 0.2em;
+}
+
+.custom-button:active {
+    background-color: var(--dark-black);
+    color: var(--white);
+}
+
+.center-items {
+    display: grid;
+
+    justify-items: center;
+}
+
+.middle-items {
+    display: grid;
+
+    justify-items: center;
+    align-items: center;
+}
+
+.full {
+    width: 100%;
+    height: 100%;
+}

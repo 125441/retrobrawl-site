@@ -1,34 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" type="text/css" href="static/css/styles.css"/>
-    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8">
     <title>RetroBrawl</title>
+
+    <link rel="stylesheet" href="static/css/styles.css"/>
+    <link rel="stylesheet" type="text/css" media="only screen and (max-width: 700px), only screen and (max-device-width: 700px)" href="static/css/mobile-styles.css" />
+    <link rel="stylesheet" href="static/css/helper-tags.css">
+    <link rel="stylesheet" href="static/css/custom-tags.css">
+    <link rel="shortcut icon" href="static/images/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/main.js"></script>
 </head>
 <body>
-    <header>
-        <div id="title">RetroBrawl</div>
-        <div id="links">
+<!--    <div id="loading-screen" class="full middle-items">-->
+<!--        <div class="loader" style="width: 2em; height: 2em"></div>-->
+<!--    </div>-->
+    <header class="middle-items">
+        <a id="title">RetroBrawl</a>
+        <div id="links" class="middle-items">
             <a href="#download">Download</a>
             <a href="#about-server">About server</a>
             <a href="#about">About us</a>
         </div>
+        <a href="javascript:void(0);" id="menu-button" onclick="toggleMenu()">
+            <i class="fa fa-bars"></i>
+        </a>
     </header>
     <div id="bgr-image"></div>
+    <div id="about-server">
+        <span class="h2">RetroBrawl is...</span> <br>
+        <span>
+            a server for the old version of Brawl Stars 11.112, which was launched on January 21, 2021 in beta access and on February 11 in open access.
+        </span>
+    </div>
     <div id="content">
-        <!--    <div style="background-color: black; height: 1000px;"></div>-->
-        <!---->
-        <div id="about-server">
-            <span class="h2">RetroBrawl is...</span>
-            <span>
-                a server for the old version of Brawl Stars 11.112, which was launched on January 21, 2021 in beta access and on February 11 in open access.
-            </span>
-        </div>
-        <div id="download">
+        <div id="download" class="center-items">
             <span class="h2">Download Client</span> <br>
-            <a href="https://files.devbs.xyz/retrobrawl" class="custom-button">Our Server</a> <br>
+            <a href="https://files.devbs.xyz/retrobrawl" class="custom-button">Our Server</a>
             <a href="https://drive.google.com/file/d/1-9Jl3P7oQ47jSMuz3sBzQfxO7hL6xAv9/view" class="custom-button">Google Drive</a>
         </div>
         <div id="about">

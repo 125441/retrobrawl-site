@@ -1,7 +1,9 @@
 :root {
+    --transperency-black: rgba(51, 51, 51, 0.5);
+
     --dark-black: #111;
     --black: #333;
-    --white: #ccc;
+    --white: #f3f3f3;
 }
 
 * {
@@ -11,6 +13,7 @@
 
 html, body {
     height: 100%;
+    width: 100%;
     margin: 0;
 }
 
@@ -27,24 +30,27 @@ a:active {
     color: var(--black);
 }
 
+#menu-button {
+    display: none;
+}
+
 #title {
     color: var(--white);
     font-size: 2em;
     font-weight: bold;
+    padding-left: 5px;
+    justify-self: start;
 }
 
 header {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, auto));
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
 
-    padding-left: 5px;
-    height: 40px;
+    height: 3em;
     width: 100%;
 
-    align-items: center;
-
     position: fixed;
-    z-index: 10;
+    z-index: 3;
     top: 0;
 
     background-color: var(--dark-black);
@@ -53,8 +59,9 @@ header {
 header > #links {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
-    justify-items: center;
-    align-items: center;
+    grid-template-rows: 1fr;
+    width: 100%;
+    height: 100%;
 }
 
 footer {
@@ -69,57 +76,6 @@ footer {
 
     position: relative;
     top: -5em;
-}
-
-.h1 {
-    font-size: 1.1em;
-    font-weight: bold;
-}
-
-.h2 {
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
-.h3 {
-    font-size: 1.3em;
-    font-weight: bold;
-}
-
-.h4 {
-    font-size: 1.4em;
-    font-weight: bold;
-}
-
-.dark-black {
-    color: var(--dark-black);
-}
-
-.black {
-    color: var(--black);
-}
-
-.white {
-    color: var(--white);
-}
-
-.inverted {
-    filter: invert(100%) hue-rotate(180deg);
-}
-
-.custom-button {
-    display: inline-block;
-
-    background-color: var(--black);
-
-    padding: 10px;
-    margin: 2px 0 2px 0;
-    border-radius: 0.2em;
-}
-
-.custom-button:active {
-    background-color: var(--dark-black);
-    color: var(--white);
 }
 
 #bgr-image {
@@ -156,9 +112,27 @@ footer {
 }
 
 #about-server {
-    display: grid;
+    background-color: var(--transperency-black);
+    color: white;
 
-    justify-items: center;
+    transform: translate(-50%, -50%);
+    z-index: 2;
+    padding: 20px;
+    text-align: center;
 
-    margin: 0 25% 0 25%;
+    position: absolute;
+    top: 45%;
+    left: 50%;
+}
+
+#loading-screen {
+    background-color: var(--dark-black);
+    position: fixed;
+    z-index: 1000;
+}
+
+.loaded > #loading-screen {
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0s 1s, opacity 1s ease-in;
 }
